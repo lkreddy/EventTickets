@@ -1,0 +1,69 @@
+
+<div class="container">
+  <div class="row">
+     
+    <div class="center-form panel">
+      <div class="panel-body">
+        <h2 class="text-center">Setup Event</h2>  
+            
+          <form method="post" ng-submit="SaveEvent()" name="evntsForm">  
+
+          <label> Event Name</label>    
+          <div class="form-group has-feedback" ng-class="{ 'has-error' : evntsForm.eventname.$invalid && evntsForm.eventname.$dirty }">          
+              <input class="form-control input-lg" type="text" name="Event Name" ng-model="evnt.eventname" placeholder="Event Name" required autofocus>                
+              <span class="ion-person form-control-feedback"></span>
+                <div class="help-block text-danger" ng-if="evntsForm.eventname.$dirty" ng-messages="evntsForm.eventname.$error">
+              <div ng-message="required">You must enter event name.</div>
+            </div>
+              </div>
+              <br />
+              
+              <div>
+                  <label> Session Name</label> 
+              <input class="form-control input-lg" type="text" name="Session Name" ng-model="evnt.sessiondesc" placeholder="Session Name" required autofocus>            
+              <span class="ion-person form-control-feedback"></span>
+
+               <label> Start Date</label> 
+              <input type="date" class="form-control input-lg" name="Start Date" ng-model="evnt.startdate" placeholder="dd-mm-yyyy" min="2016-04-01" max="2017-04-01" required autofocus>
+              <span class="ion-person form-control-feedback"></span>
+              
+                  <label> Start Time</label> 
+              <input type="time" class="form-control input-lg" name="Start Time" ng-model="evnt.starttime" placeholder="hh:mm" required autofocus>                          
+              <span class="ion-person form-control-feedback"></span>
+
+                  <label> Duration</label> 
+              <input type="number" class="form-control input-lg" type="text" name="Duration" ng-model="evnt.duration" placeholder="Duration" min="0" max="99" required autofocus>                
+              <span class="ion-person form-control-feedback"></span>                  
+              </div>
+               <br />
+              <input type="submit" class="btn btn-lg btn-primary btn-eve " value="Save Event"/>
+                <br /><br />
+              <p><a href="#/tickets">Click here</a> to setup tickets for this event</p>
+              <div class="events-or-separator">            
+                <hr>
+              </div>
+              <h3>Events setup are:</h3>
+              <div class="container">
+              <table class="table table-bordered">
+                  <tr>
+                      <td>Event Name</td>
+                      <td>Session Description</td>
+                      <td>Start Date</td>
+                      <td>Start Time</td>
+                      <td>Duration</td>
+                  </tr>
+                <tr ng-repeat="e in evnts"> 
+                    <td>{{e.eventname}}</td>
+                    <td>{{e.sessiondesc}}</td> 
+                    <td>{{e.startdate}}</td>
+                    <td>{{e.starttime}}</td> 
+                    <td>{{e.duration}}</td>
+                </tr> 
+                </table>
+                  
+              </div>              
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

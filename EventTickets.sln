@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EventTickets", "EventTickets\", "{8FEE9B29-6796-4A4C-8517-A638492DEED6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/EventTickets"
+		Debug.AspNetCompiler.PhysicalPath = "EventTickets\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\EventTickets\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/EventTickets"
+		Release.AspNetCompiler.PhysicalPath = "EventTickets\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\EventTickets\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53357"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsWebAPI", "EventsAPI\EventsWebAPI.csproj", "{BE9B1D6C-798B-4ABB-923D-386C4A413F54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FEE9B29-6796-4A4C-8517-A638492DEED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FEE9B29-6796-4A4C-8517-A638492DEED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FEE9B29-6796-4A4C-8517-A638492DEED6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FEE9B29-6796-4A4C-8517-A638492DEED6}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{BE9B1D6C-798B-4ABB-923D-386C4A413F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE9B1D6C-798B-4ABB-923D-386C4A413F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE9B1D6C-798B-4ABB-923D-386C4A413F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE9B1D6C-798B-4ABB-923D-386C4A413F54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

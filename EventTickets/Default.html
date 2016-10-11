@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp" ng-init="loginid=''">
+<head>
+<title>Event Tickets</title>
+<meta charset="utf-8">
+    <!--<meta name="google-signin-client_id" content="831371170934-udapit5jhjj56pft5l2drc9gjhfeclf3.apps.googleusercontent.com">-->
+</head>
+<body>  
+    <hr>    
+    <a href="#/home" style="text-align:center"><h1>Event Tickets</h1></a>
+    <hr>
+    <script src="scripts/vendor/angular.min.js"> </script>
+    <script src="scripts/vendor/angular-ui-router.js"></script>
+           
+    <script src="scripts/vendor/angular-toastr.tpls.js"></script>   
+    <script src="scripts/vendor/angular-animate.js"></script>
+    <script src="scripts/vendor/angular-messages.js"></script>
+    <script src="scripts/vendor/angular-resource.js"></script>
+    <script src="scripts/vendor/angular-sanitize.js"></script>
+    <script src="scripts/vendor/passwordStrength.js"></script>
+    <script src="scripts/vendor/passwordMatch.js"></script>
+    <script src="//cdn.jsdelivr.net/satellizer/0.8.2/satellizer.min.js"></script>
+    <!--
+    <script src="//connect.facebook.net/en_US/sdk.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>-->
+    
+
+    <script src="scripts/init.js"> </script>   
+    <script src="scripts/home.js"> </script>
+    <script src="scripts/login.js"> </script>
+    <script src="scripts/signup.js"> </script>
+    <script src="scripts/events.js"> </script>    
+    <script src="scripts/tickets.js"> </script>     
+    <script src="scripts/purchase.js"> </script>
+    
+   <!-- <script src="scripts/test.js"> </script>     --> 
+
+
+    <link rel="stylesheet" href="styles/Site.css"/> 
+	<link rel="stylesheet" href="styles/bootstrap-theme.min.css"/> 
+	<link rel="stylesheet" href="styles/bootstrap.min.css"/> 
+    <link href="/styles/angular-toastr.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet"> 
+<div> 
+    <div ui-view></div>
+</div>
+    </body>
+</html>

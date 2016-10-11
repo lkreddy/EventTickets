@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-EventsAPI-20160325233300;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-EventsAPI-20160325233300.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\WORK\\Omnify\ Proj\\EventsAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="EventsDBContext1-Web.config Connection String" description="EventsDBContext1 Connection String used in web.config by the application to access the database." defaultValue="Data Source=kalyan.database.windows.net;Database=Events;User ID=srethan;Password=srena@123;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\WORK\\Omnify\ Proj\\EventsAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EventsDBContext1']/@connectionString" />
+  </parameter>
+  <parameter name="EventsDBContext-Web.config Connection String" description="EventsDBContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:kalyan.database.windows.net,1433;Database=Events;User ID=srethan;Password=srenya@123;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\WORK\\Omnify\ Proj\\EventsAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EventsDBContext']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,44 @@
+<meta name="google-signin-client_id" content="506903963651-fk1bg0fntovfbgonf97suct1g17j3tol.apps.googleusercontent.com">
+
+<div class="container">
+  <div class="row">
+    <div class="center-form panel">
+      <div class="panel-body">
+        <h2 class="text-center">Log in</h2>           
+          <label>User ID</label>
+          <div class="form-group has-feedback">
+            <input class="form-control input-lg" type="text" name="id" ng-model="user.id" placeholder="User ID" required autofocus>
+            <span class="ion-at form-control-feedback"></span>
+          </div>
+              <label>Password</label>
+          <div class="form-group has-feedback">
+            <input class="form-control input-lg" type="password" name="password" ng-model="user.password" placeholder="Password" required>
+            <span class="ion-key form-control-feedback"></span>
+          </div>
+        <br/>
+        <button ng-click="SignIn()" ng-disabled="loginForm.$invalid" class="btn btn-lg  btn-success">Log in</button>              
+         <br /><br />
+      <p class="text-center text-muted">
+            <h6>Don't have an account yet? <a href="#/signup">Sign up</a></h6>
+          </p>
+        <div class="events-or-separator">
+            <br />
+            <h6>Or</h6>            
+            <br />                        
+         </div>
+             <button class="btn  btn-google-plus" ng-click="google_login()">
+                 <span class="ion-social-googleplus"></span>Sign in with Google
+            </button>
+
+<!--          <div class="g-signin2" data-onsuccess="onSuccess"></div>
+        -->
+          <div class="events-or-separator">
+            <hr>
+          </div>
+          
+
+      </div>
+         
+      </div>
+    </div>
+</div>

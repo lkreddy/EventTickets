@@ -1,0 +1,68 @@
+
+<div class="container">
+  <div class="row">
+     
+    <div class="center-form panel">
+      <div class="panel-body">
+        <h2 class="text-center">Create Tickets</h2>   
+          <form method="post" ng-submit="SaveTickets()" name="ticketForm"> 
+          Select Event: 
+          <select ng-change="EventSelected()" ng-model="selEvent" ng-options="evnt as evnt.eventname for evnt in evnts"></select>
+          <div class="events-or-separator">            
+            <hr>
+          </div>
+              <div>
+                  <label>Ticket Name</label>
+              <input class="form-control input-lg" type="text" name="Ticket Name" ng-model="ticket.ticketname" placeholder="Ticket Name" required autofocus>
+              <span class="ion-person form-control-feedback"></span>
+                  <label>Availability</label>
+              <input class="form-control input-lg" type="text" name="Availability" ng-model="ticket.availability" placeholder="Availability" required autofocus>            
+              <span class="ion-person form-control-feedback"></span>
+                  <label>Min Tickets</label>
+              <input type="number" class="form-control input-lg" name="Min Tickets" ng-model="ticket.minqty" min="0" max="99" placeholder="Min Tickets" required autofocus>            
+              <span class="ion-person form-control-feedback"></span>
+              
+                  <label>Max Tickets</label>
+                  <input type="number" class="form-control input-lg" name="Max Tickets" ng-model="ticket.maxqty" min="0" max="99" placeholder="Max Tickets" required autofocus>            
+                  <span class="ion-person form-control-feedback"></span>
+                  <label>Ticket Price (AUD)</label>
+              <input type="number" class="form-control input-lg" name="Ticket Price" ng-model="ticket.price" min="0" placeholder="Ticket Price" required autofocus>            
+                  <span class="ion-person form-control-feedback"></span>
+
+              <div role="alert">
+               <span class="error" ng-show="ticketForm.input.$error.number">Not valid number!</span>
+              </div>
+              </div>
+              <br /><br />
+               <input type="submit" class="btn btn-lg  btn-primary" value="Save Tickets"/>
+               <br /><br />
+              <a href="#/purchase">Click here</a> to purchase tickets for this event
+              <div class="events-or-separator">            
+                <hr>
+              </div>  
+              <h3>Tickets setup are:</h3>
+              <div class="container">
+              <table class="table table-bordered">
+                  <tr>
+                      <td>Ticket Name</td>
+                      <td>Availability</td>
+                      <td>Min Tickets</td>
+                      <td>Max Tickets</td>
+                      <td>Ticket Price (AUD)</td>
+                  </tr>
+                <tr ng-repeat="tkt in tickets"> 
+                    <td>{{tkt.ticketname}}</td> 
+                    <td>{{tkt.availability}}</td>
+                    <td>{{tkt.minqty}}</td> 
+                    <td>{{tkt.maxqty}}</td>
+                    <td>{{tkt.price}}</td>
+                </tr> 
+                </table>
+                  
+              </div>               
+              </form>   
+           
+      </div>
+    </div>
+  </div>
+</div>

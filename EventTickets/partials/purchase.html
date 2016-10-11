@@ -1,0 +1,43 @@
+
+<div class="container">
+  <div class="row">
+     
+    <div class="center-form panel">
+      <div class="panel-body">
+        <h2 class="text-center">Purchase Tickets</h2>              
+        <form method="post" ng-submit="Purchase()" name="TransForm" >
+          <label>Select Ticket </label>          
+          <select ng-change="TicketSelected()" ng-model="selTicket" ng-options="ticket as ticket.ticketname for ticket in tickets"></select>
+          <br /><br />
+          <label>Select Quanity</label>          
+          <select ng-model="quantity" ng-options="qty as qty for qty in qtylist"></select>
+            <hr> 
+            <input type="submit" value="Purchase" class="btn btn-lg  btn-primary"/>                             
+             <div class="events-or-separator">            
+                <hr>
+              </div>
+            <h3>Tickets Purchased</h3>
+            <div class="container">
+            <table class="table table-bordered">
+                <tr>
+                    <td>Ticket Name</td>
+                    <td>Session Name</td>
+                    <td>Event Name</td>
+                    <td>Quantity</td>
+                    <td>Price (AUD)</td>
+                </tr>
+            <tr ng-repeat="trans in transactions"> 
+                <td>{{trans.ticketname}}</td> 
+                <td>{{trans.sessiondesc}}</td> 
+                <td>{{trans.eventname}}</td> 
+                <td>{{trans.quantity}}</td>
+                <td>{{trans.price}}</td>                     
+            </tr> 
+            </table>
+                  
+            </div>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
